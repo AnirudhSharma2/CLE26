@@ -1,0 +1,84 @@
+mylist = [10,20,30]
+if 0 not in mylist: # checks if list is present or not
+    print ("yes")
+else :
+    print("No")
+    
+s1 = "python"
+s2 = "python"
+s2=s1
+print(s1==s2)
+print(s1 is s2)
+
+
+a =1
+b=3 
+c=5
+
+if a >b : 
+    max = a
+else:
+    max=b
+if(c>max): max=c #single suite statement
+print("Max is ",max)
+
+#short hand if else statement:Ternary operator
+ #   A if B else C
+ 
+age = int(input())
+status = "adult" if age >=18 else "minor"
+print("You are "+status)
+
+day = (input("Enter a day "))
+
+match day:
+    case "Monday" | "Tuesday":
+        print("working day")
+    case "Sunday" | "Saturday":
+        print("Weekend")
+    case _:
+        print("Invalid Input")
+        
+#Loops
+number=int(input("Enter a number:"))
+i=1
+while(i<=10):
+    print(number,"*",i,"=",i*number)
+    i+=1
+    
+    
+myList = [10,20,30]
+sum=0
+for item in myList:
+    print(item)
+    sum+=item
+print(sum)
+
+for i in range(1,11,3):
+    print(i)
+    
+    
+#read 5 values and find sum of all values
+
+sum=0
+for i in range (5):
+    value = int (input("Enter a value"))
+    sum+=value
+    
+print(sum)
+
+
+# printing index - enumerate , used for numbering members in the list 
+myList = ["Pyhton","Java","C++"]
+
+for index,item in enumerate(myList):
+    print(index,item)
+    
+#zip function - used to map elements of list1 corresponding to list 2, combining diff list , used to loop through multiple sequences in parallel
+myList = ["Pyhton","Java","C++"]
+age=[34,45,32]
+usability = [1,2,3]
+for myList,age,usability in zip(myList,age,usability):
+    if myList =="C#":
+        break
+    print(myList,age,usability)
